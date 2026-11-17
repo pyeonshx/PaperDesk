@@ -17,6 +17,7 @@ function references(){
  if(c.sources.length===0)box.append('이 섹션에는 일반 편집 기준을 적용합니다.');
 }
 const rules=[
+ [/\b[Ii]m (?=korean\b)/gi,"I am "],[/\bkorean\b/g,"Korean"],
  [/\bin order to\b/gi,'to'],[/\bdue to the fact that\b/gi,'because'],[/\bat the present time\b/gi,'currently'],[/\bfor the purpose of\b/gi,'for'],[/\bwith regard to\b/gi,'regarding']
 ];
 function polish(input){let draft=input,changes=[];for(const [pattern,replacement] of rules){draft=draft.replace(pattern,(word,offset,str)=>{changes.push(word+' → '+replacement);return /^[A-Z]/.test(word)&&!str.slice(0,offset).trim().match(/[^.!?]$/)?replacement[0].toUpperCase()+replacement.slice(1):replacement;});}return {draft,reason:[...new Set(changes)].join('\n')||'자동으로 줄일 표현을 찾지 못했습니다.'};}
@@ -51,6 +52,8 @@ el('ai').onclick=async()=>{clearReview();const id=revision,text=el('src').value;
  el('ai').disabled=true;el('status').textContent='초안을 작성하고 있습니다…';
  try{const res=await fetch('/revise',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({text,context:context()})});const data=await res.json();if(id!==revision)return;if(!res.ok)throw Error(data.error);show(data.draft,data.reason);el('status').textContent='';}catch(e){if(id===revision)el('status').textContent=e.message;}finally{el('ai').disabled=false;}};
 references();
+const loadingNotice=document.getElementById('loadingNotice');
+if(loadingNotice)loadingNotice.hidden=true;
 if(new URLSearchParams(location.search).has('word')){
  const script=document.createElement('script');script.src='https://appsforoffice.microsoft.com/lib/1/hosted/office.js';script.onload=()=>Office.onReady(info=>{if(info.host!==Office.HostType.Word)return;
  el('read').hidden=el('apply').hidden=false;
