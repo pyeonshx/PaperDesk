@@ -1,0 +1,1 @@
+{"name":"paperdesk-word","private":true,"version":"0.1.0","scripts":{"start":"node server.cjs"},"engines":{"node":">=20"},"dependencies":{"office-addin-dev-certs":"^1.13.0"}}

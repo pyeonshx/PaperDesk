@@ -1,0 +1,1 @@
+const baselineStats = {"baseline": "pubmed26", "files": 1334, "processed": 10, "records": 274989, "abstracts": 236358, "english_abstracts": 232054, "structured": 83014, "contrast": 63789, "uncertainty": 71928, "purpose": 18522};
