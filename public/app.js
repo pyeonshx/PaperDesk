@@ -45,6 +45,11 @@ function show(draft,reason){el('draft').value=draft;el('why').textContent=reason
 el('src').oninput=()=>{original=null;clearReview();};
 for(const id of ['sec','journal'])el(id).onchange=()=>{clearReview();references();};
 el('sample').onclick=()=>{if(el('src').value&&!confirm('작성 중인 입력을 예시로 바꿀까요?'))return;el('src').value='In order to assess reproducibility, we compared measurements from two experiments. The estimates were similar (Fig. 2A), although the second experiment included fewer samples.';el('src').oninput();};
+el('src').onkeydown = event => {
+ if(event.key !== 'Enter' || event.shiftKey || event.isComposing || event.keyCode === 229) return;
+ event.preventDefault();
+ if(!event.repeat) el('edit').click();
+};
 el('draft').oninput=compare;
 el('edit').onclick=()=>{clearReview();const s=el('src').value;if(!s.trim()){el('status').textContent='점검할 문단을 입력하세요.';return;}const r=polish(s);show(r.draft,r.reason+'\n'+reviewNotes(s,context()));};
 el('copy').onclick=async()=>{try{await navigator.clipboard.writeText(el('draft').value);el('status').textContent='수정안을 복사했습니다.';}catch{el('draft').focus();el('draft').select();el('status').textContent='선택한 수정안을 복사하세요 (⌘C / Ctrl+C).';}};
