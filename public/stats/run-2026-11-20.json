@@ -1,0 +1,41 @@
+{
+  "date": "2026-11-20",
+  "baseline_year": 2026,
+  "baseline_run": {
+    "completed": 100,
+    "unresolved_failures": 0,
+    "processed_total": 291,
+    "files_total": 1334,
+    "records": 8704988,
+    "abstracts": 7653692
+  },
+  "fulltext_run": {
+    "completed_pages": 5,
+    "new_successes": 168,
+    "retry_attempts": 4,
+    "retry_successes": 4,
+    "pending_retry": 0
+  },
+  "fulltext_totals": {
+    "verified": 860,
+    "pending_retry": 0,
+    "sections": {
+      "Introduction": 4454,
+      "Methods": 10795,
+      "Discussion": 9343,
+      "Figure legend": 3855,
+      "Results": 12917
+    }
+  },
+  "persistence": {
+    "pubmed_checkpoints": "GitHub",
+    "fulltext_database": "Local paperdesk-run/data/oa.sqlite; public database upload blocked by prior approval review"
+  },
+  "checks": {
+    "whole_index_search_http": 200,
+    "word_manifest": "parsed",
+    "abstract_guidance": "passed",
+    "full_scan_complete": false,
+    "incremental_updates_checked": false
+  }
+}
