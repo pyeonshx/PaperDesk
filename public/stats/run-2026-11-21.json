@@ -1,0 +1,78 @@
+{
+  "date": "2026-11-21",
+  "baseline_year": 2026,
+  "baseline_run": {
+    "requested_files": 100,
+    "completed_files": 100,
+    "unresolved_failures": 0,
+    "internal_retry_attempts": null,
+    "internal_retry_note": "Existing baseline script does not log recovered internal retry attempts.",
+    "new_records": 3000000,
+    "new_abstracts": 2555128
+  },
+  "baseline_totals": {
+    "baseline": "pubmed26",
+    "files": 1334,
+    "processed": 391,
+    "records": 11704988,
+    "abstracts": 10208820,
+    "english_abstracts": 10008778,
+    "structured": 3317968,
+    "contrast": 2650624,
+    "uncertainty": 3283562,
+    "purpose": 953458
+  },
+  "fulltext_run": {
+    "requested_pages": 5,
+    "completed_pages": 1,
+    "remaining_requested_pages": 4,
+    "new_successes": 81,
+    "new_failed_papers": 17,
+    "paper_retry_attempts": 34,
+    "paper_retry_successes": 0,
+    "pending_retry": 17,
+    "search_page_failures": 3,
+    "search_page_retry_attempts": 2,
+    "error": "HTTP 500 from Europe PMC search and fullTextXML; stopped after two resume attempts."
+  },
+  "fulltext_totals": {
+    "verified": 941,
+    "pending_retry": 17,
+    "sections": {
+      "Introduction": 4794,
+      "Methods": 11785,
+      "Discussion": 10172,
+      "Figure legend": 4161,
+      "Results": 13969
+    }
+  },
+  "section_units": {
+    "Introduction": "paragraphs",
+    "Methods": "paragraphs",
+    "Results": "paragraphs",
+    "Discussion": "paragraphs",
+    "Figure legend": "figure captions"
+  },
+  "persistence": {
+    "pubmed_checkpoints": "GitHub public/stats/pubmed26*.json",
+    "fulltext_database": "Local paperdesk-run/data/oa.sqlite only. Prior automated approval review rejected publication of the full database. Remote database is stale; resume from local verified database.",
+    "cursor_retained": true
+  },
+  "checks": {
+    "sqlite_integrity": "ok",
+    "baseline_checksum_metadata_and_aggregate": "passed",
+    "whole_index_search_http": 200,
+    "whole_index_hits": 41401472,
+    "word_manifest": "XML parsed",
+    "javascript_syntax": "passed",
+    "nature_plos_guidance_and_enter_handlers": "passed mocked DOM tests",
+    "live_word_host_tested": false,
+    "full_scan_complete": false,
+    "incremental_updates_checked": false,
+    "baseline_year_changed": false
+  },
+  "guidance_sources": [
+    "https://www.nature.com/nature/for-authors/formatting-guide",
+    "https://journals.plos.org/plosbiology/s/submission-guidelines"
+  ]
+}
