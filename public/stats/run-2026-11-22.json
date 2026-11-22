@@ -1,0 +1,83 @@
+{
+  "date": "2026-11-22",
+  "baseline_year": 2026,
+  "baseline_run": {
+    "completed_files": 200,
+    "batches": 2,
+    "unresolved_failures": 0,
+    "internal_retry_attempts": null,
+    "internal_retry_note": "Existing baseline script does not log recovered internal retries.",
+    "new_records": 6000000,
+    "new_abstracts": 5082136
+  },
+  "baseline_totals": {
+    "baseline": "pubmed26",
+    "files": 1334,
+    "processed": 591,
+    "records": 17704988,
+    "abstracts": 15290956,
+    "english_abstracts": 14896542,
+    "structured": 4850346,
+    "contrast": 3785592,
+    "uncertainty": 5030396,
+    "purpose": 1343696
+  },
+  "fulltext_run": {
+    "requested_pages": 5,
+    "completed_pages": 3,
+    "remaining_requested_pages": 2,
+    "increase_in_verified": 233,
+    "new_successes_excluding_retries": 209,
+    "new_failed_papers": 85,
+    "paper_retry_attempts": 103,
+    "paper_retry_successes": 24,
+    "paper_retries_detail": [
+      {
+        "attempts": 17,
+        "successes": 16
+      },
+      {
+        "attempts": 86,
+        "successes": 8
+      }
+    ],
+    "pending_retry": 78,
+    "search_page_failures": 2,
+    "search_page_retry_attempts": 1,
+    "error": "HTTP 500/503 and timeouts; final search resume returned HTTP 503."
+  },
+  "fulltext_totals": {
+    "verified": 1174,
+    "pending_retry": 78,
+    "sections": {
+      "Introduction": 5826,
+      "Methods": 14086,
+      "Discussion": 12862,
+      "Figure legend": 5282,
+      "Results": 16487
+    }
+  },
+  "section_units": "Introduction/Methods/Results/Discussion: paragraphs; Figure legend: figure captions",
+  "persistence": {
+    "pubmed_checkpoints": "GitHub",
+    "fulltext_database": "Local paperdesk-run/data/oa.sqlite only; public database upload blocked by prior automated approval review. Remote database is stale.",
+    "cursor_retained": true
+  },
+  "checks": {
+    "sqlite_integrity": "ok",
+    "baseline_aggregate_and_checksum_metadata": "passed",
+    "whole_index_search_http": 200,
+    "whole_index_hits": 41405924,
+    "word_manifest": "parsed",
+    "javascript_syntax": "passed",
+    "nature_plos_guidance_test": "passed",
+    "live_word_host_tested": false,
+    "baseline_year_changed": false,
+    "full_scan_complete": false,
+    "incremental_updates_checked": false
+  },
+  "guidance_sources": [
+    "https://www.nature.com/nature/for-authors/formatting-guide",
+    "https://journals.plos.org/plosbiology/s/submission-guidelines"
+  ]
+}
