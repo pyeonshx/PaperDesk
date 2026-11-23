@@ -1,1 +1,1 @@
-const fulltextStats = {"verified": 1174, "pending_retry": 78, "sections": {"Introduction": 5826, "Methods": 14086, "Discussion": 12862, "Figure legend": 5282, "Results": 16487}};
+const fulltextStats = {"verified": 1248, "pending_retry": 209, "sections": {"Introduction": 6145, "Methods": 14906, "Discussion": 13847, "Figure legend": 5625, "Results": 17697}};

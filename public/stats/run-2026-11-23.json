@@ -1,0 +1,74 @@
+{
+  "date": "2026-11-23",
+  "baseline_year": 2026,
+  "baseline_run": {
+    "completed_files": 200,
+    "batches": 2,
+    "unresolved_failures": 0,
+    "internal_retry_attempts": null,
+    "internal_retry_note": "Existing script does not log recovered internal retries.",
+    "new_records": 6000000,
+    "new_abstracts": 4604898
+  },
+  "baseline_totals": {
+    "baseline": "pubmed26",
+    "files": 1334,
+    "processed": 791,
+    "records": 23704988,
+    "abstracts": 19895854,
+    "english_abstracts": 19200678,
+    "structured": 6010848,
+    "contrast": 4679920,
+    "uncertainty": 6577879,
+    "purpose": 1608792
+  },
+  "fulltext_run": {
+    "requested_pages": 5,
+    "completed_pages": 5,
+    "increase_in_verified": 74,
+    "new_successes_excluding_retries": 69,
+    "new_failed_papers": 136,
+    "paper_retry_attempts": 78,
+    "paper_retry_successes": 5,
+    "pending_retry": 209,
+    "search_page_failures": 0,
+    "error_counts": {
+      "HTTP Error 500: Internal Server Error": 206,
+      "The read operation timed out": 3
+    }
+  },
+  "fulltext_totals": {
+    "verified": 1248,
+    "pending_retry": 209,
+    "sections": {
+      "Introduction": 6145,
+      "Methods": 14906,
+      "Discussion": 13847,
+      "Figure legend": 5625,
+      "Results": 17697
+    }
+  },
+  "section_units": "Introduction/Methods/Results/Discussion: paragraphs; Figure legend: figure captions",
+  "persistence": {
+    "pubmed_checkpoints": "GitHub",
+    "fulltext_database": "Local paperdesk-run/data/oa.sqlite only; prior automated approval review blocked public database upload. Remote database is stale.",
+    "cursor_retained": true
+  },
+  "checks": {
+    "sqlite_integrity": "ok",
+    "baseline_aggregate_and_checksum_metadata": "passed",
+    "whole_index_search_http": 200,
+    "whole_index_hits": 41405906,
+    "word_manifest": "parsed",
+    "javascript_syntax": "passed",
+    "writing_guidance": "Nature/PLOS official guidance compared; code unchanged",
+    "live_word_host_tested": false,
+    "baseline_year_changed": false,
+    "full_scan_complete": false,
+    "incremental_updates_checked": false
+  },
+  "guidance_sources": [
+    "https://www.nature.com/nature/for-authors/formatting-guide",
+    "https://journals.plos.org/plosbiology/s/submission-guidelines"
+  ]
+}
